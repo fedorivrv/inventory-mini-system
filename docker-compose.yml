@@ -1,6 +1,7 @@
 services:
   postgres:
     image: postgres:16
+    platform: linux/amd64
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -12,6 +13,7 @@ services:
       - "5432:5432"
 
   backend:
+    platform: linux/amd64
     build:
       context: ./backend
     ports:
@@ -23,6 +25,7 @@ services:
       - postgres
 
   frontend:
+    platform: linux/amd64
     build:
       context: ./frontend
     ports:

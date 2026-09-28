@@ -1,0 +1,7 @@
+node_modules
+distdocker compose up --build
+npm-debug.log
+.git
+.gitignore
+.env
+coverage
