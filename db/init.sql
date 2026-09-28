@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS products (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    quantity INTEGER NOT NULL DEFAULT 0,
+    price NUMERIC(10, 2) NOT NULL DEFAULT 0,
+    status VARCHAR(20) NOT NULL DEFAULT 'out_of_stock',
+    description TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
